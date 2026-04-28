@@ -213,5 +213,30 @@
 > | [security-policies-procedures](https://github.com/kcrozz55/security-policies-procedures) | Policies referenced in SSP and FedRAMP attachments |
 >
 > ---
->
+
+---
+
+## System Diagrams
+
+The following diagrams support this ATO package. All diagrams are maintained in the [medcore-health-systems](https://github.com/kcrozz55/medcore-health-systems) repository and referenced here.
+
+---
+
+### Authorization Boundary Diagram
+
+This diagram defines the official ATO boundary for the MedCore EHRP — the precise scope of this authorization package. The boundary encompasses the API Gateway (TLS Termination), Auth Service (OAuth2/OIDC), Application Layer (Patient Record Service, Clinical Logic Engine), and Data Layer (Primary Database, Immutable Audit Store). Components outside the boundary — Client Tier, Identity Provider, and Health Information Exchange — are external dependencies governed by separate agreements. This diagram is referenced in SSP Section 2 and FedRAMP Attachment 9 (CIS/CRA).
+
+![Authorization Boundary Diagram](https://raw.githubusercontent.com/kcrozz55/medcore-health-systems/main/diagrams/authorization-boundary-diagram.png)
+
+---
+
+### NIST RMF Process Flow
+
+This diagram maps the complete NIST Risk Management Framework lifecycle applied to the MedCore EHRP authorization process. Beginning with Step 0 (Prepare), the RMF Core Cycle flows through Categorization (FIPS 199/SP 800-60), Control Selection (SP 800-53 Moderate Baseline), Implementation (System Security Plan), Assessment (Security Assessment Report), Authorization (Authority to Operate), and Continuous Monitoring. The Artifacts layer identifies the three primary deliverables produced by this process: the SSP, SAR, and POA&M — all of which are documented in this repository.
+
+![NIST RMF Process Flow](https://raw.githubusercontent.com/kcrozz55/medcore-health-systems/main/diagrams/nist-rmf-process-flow.png)
+
+---
+
+*All diagrams are version-controlled and reflect the current authorization posture of the MedCore EHRP.*
 > *This ATO package is fictional and created for cybersecurity portfolio demonstration purposes only. No real systems, organizations, or sensitive information are involved.*
